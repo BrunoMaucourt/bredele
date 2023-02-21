@@ -1,3 +1,7 @@
-controllers:
-    resource: ../src/Controller/
-    type: attribute
+accueil:
+    path: /
+    controller: App\Controller\AccueilController::accueil
+    
+app_lucky_number:
+    path: /lucky/number
+    controller: App\Controller\LuckyController::number
