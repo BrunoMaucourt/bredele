@@ -27,15 +27,15 @@
 						</a>
 						<ul class="dropdown-menu">
 							<li>
-								<a class="dropdown-item" href="#">Bredele</a>
+								<a class="dropdown-item" href="{{ path('product') }}">Bredele</a>
 							</li>
 							<li><hr class="dropdown-divider"></li>
 							<li>
-								<a class="dropdown-item" href="#">Bredele au chocolat</a>
+								<a class="dropdown-item" href="{{ path('product') }}">Bredele au chocolat</a>
 							</li>
 							<li><hr class="dropdown-divider"></li>
 							<li>
-								<a class="dropdown-item" href="#">Bredele végan</a>
+								<a class="dropdown-item" href="{{ path('product') }}">Bredele végan</a>
 							</li>
 						</ul>
 					</li>
@@ -46,7 +46,7 @@
 						<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Recettes</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Blog</a>
+						<a class="nav-link active" aria-current="page" href="{{ path('blog') }}">Blog</a>
 					</li>
 				</ul>
 			</div>
@@ -54,98 +54,7 @@
 	</nav>
 {% endblock header %}
 
-
-{% block main %}
-	<div id="carouselExampleIndicators" class="carousel slide w-50">
-		<div class="carousel-indicators">
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-		</div>
-		<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="{{ asset('assets/pictures/website/slider1.jpg') }}" class="d-block w-100" alt="">
-			</div>
-			<div class="carousel-item">
-				<img src="{{ asset('assets/pictures/website/slider2.jpg') }}" class="d-block w-100" alt="">
-			</div>
-			<div class="carousel-item">
-				<img src="{{ asset('assets/pictures/website/slider3.jpg') }}" class="d-block w-100" alt="">
-			</div>
-			<div class="carousel-item">
-				<img src="{{ asset('assets/pictures/website/slider4.jpg') }}" class="d-block w-100" alt="">
-			</div>
-		</div>
-		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-		</button>
-		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-		</button>
-	</div>
-
-	<div>
-		<h2 class="text-center">Notre entreprise</h2>
-		<p>
-			L'entreprise, fictive, Bredele a pour but de diffuser la culture gastronimique alsacienne via les gâteaux de Noël appelés les bredele. Les bredele sont des petits biscuits préparés tarditonnellement en Alsace pour les fêtes de Noël. Les recettes de bredele sont transmisses de générations en générations. Voici quelques recettes que vous pourrez cuisiner chez vous.
-		</p>
-
-
-		<h2 class="text-center">Produits populaires</h2>
-
-		<!-- produits populaires
-						        photo
-						        réduction
-						        nom
-						        titre
-						        Ajouter panier
-						    
-						     -->
-	</div>
-
-	<h2 class="text-center">Sur notre blog</h2>
-	<section class="d-flex justify-content-between">
-		<div>
-			<h3>Sélection de livres</h3>
-		</div>
-		<div>
-			<h3>Mes codes promos</h3>
-		</div>
-		<div>
-			<h3>Recettes en vidéos</h3>
-		</div>
-		<div>
-			<h3>Outil pratique</h3>
-		</div>
-	</section>
-
-	<h2 class="text-center">Bredele c'est</h2>
-	<div class="d-flex justify-content-between">
-		<div>
-			<h3>Satisfait ou remboursé</h3>
-			<p>14 jours pour changer d'avis et être remboursé</p>
-		</div>
-		<div>
-			<h3>Service express</h3>
-			<p>livraison en 24 heures</p>
-		</div>
-		<div>
-			<h3>Livraison gratuite</h3>
-			<p>dès 50 euros</p>
-		</div>
-		<div>
-			<h3>Paiement sécurisé</h3>
-			<p>Données bancaires cryptées</p>
-		</div>
-	</div>
-
-{% endblock main %}
-
 {% block footer %}
-
 	<div class="d-flex justify-content-around mt-5">
 		<div>
 			<h3>Produits</h3>
@@ -169,16 +78,26 @@
 		</div>
 		<div>
 			<h3>Nous contacter</h3>
-			<p>Email us: demo@prestashop.com</p>
+			<p>Email : contact@brunomaucourt.com</p>
 		</div>
 	</div>
 	<h3 class="text-center">Retouvez nous sur nos réseaux sociaux :</h3>
-	<div class="d-flex justify-content-around">
-		<img src="{{ asset('assets/pictures/website/LogoFacebook.svg') }}" class="" alt="">
-		<img src="{{ asset('assets/pictures/website/LogoInstagram.svg') }}" class="" alt="">
-		<img src="{{ asset('assets/pictures/website/LogoTwitter.svg') }}" class="" alt="">
-		<img src="{{ asset('assets/pictures/website/LogoYoutube.svg') }}" class="" alt="">
-		<img src="{{ asset('assets/pictures/website/LogoRSS.svg') }}" class="" alt="">
+	<div class="d-flex justify-content-around my-3">
+		<a href="#">
+			<img src="{{ asset('assets/pictures/website/social_media/LogoFacebook.svg') }}" class="" alt="">
+		</a>
+		<a href="#">
+			<img src="{{ asset('assets/pictures/website/social_media/LogoInstagram.svg') }}" class="" alt="">
+		</a>
+		<a href="#">
+			<img src="{{ asset('assets/pictures/website/social_media/LogoTwitter.svg') }}" class="" alt="">
+		</a>
+		<a href="#">
+			<img src="{{ asset('assets/pictures/website/social_media/LogoYoutube.svg') }}" class="" alt="">
+		</a>
+		<a href="#">
+			<img src="{{ asset('assets/pictures/website/social_media/LogoRSS.svg') }}" class="" alt="">
+		</a>
 	</div>
-	<p class="text-center">Copyright B. Maucourt 2022 - Site portfolio</p>
+	<p class="text-center mt-3">Copyright - <a href="https://brunomaucourt.com">Bruno Maucourt</a> {{ current_year }}  - Site portfolio</p>
 {% endblock footer %}

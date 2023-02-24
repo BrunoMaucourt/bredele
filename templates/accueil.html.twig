@@ -1,10 +1,96 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block main %}
+	<div class="container-fluid d-flex justify-content-center">
+		<div id="carouselExampleIndicators" class="carousel slide w-75">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="{{ asset('assets/pictures/website/slider1.jpg') }}" class="d-block w-100" alt="">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ asset('assets/pictures/website/slider2.jpg') }}" class="d-block w-100" alt="">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ asset('assets/pictures/website/slider3.jpg') }}" class="d-block w-100" alt="">
+				</div>
+				<div class="carousel-item">
+					<img src="{{ asset('assets/pictures/website/slider4.jpg') }}" class="d-block w-100" alt="">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+	</div>
 
-{% block page_contents %}
-	{# for article in articles #}
-		<h2>Titre H2</h2>
-		<p>article.body</p>
-	{# endfor #}
-{% endblock %}
+	<div>
+		<h2 class="text-center">Notre entreprise</h2>
+		<p>
+			L'entreprise, fictive, Bredele a pour but de diffuser la culture gastronimique alsacienne via les gâteaux de Noël appelés les bredele. Les bredele sont des petits biscuits préparés tarditonnellement en Alsace pour les fêtes de Noël. Les recettes de bredele sont transmisses de générations en générations. Voici quelques recettes que vous pourrez cuisiner chez vous.
+		</p>
+
+
+		<h2 class="text-center">Produits populaires</h2>
+
+		<!-- produits populaires
+								        photo
+								        réduction
+								        nom
+								        titre
+								        Ajouter panier
+								    
+								     -->
+	</div>
+
+	<h2 class="text-center">Sur notre blog</h2>
+	<section class="d-flex justify-content-between">
+		<div>
+			<h3>Sélection de livres</h3>
+		</div>
+		<div>
+			<h3>Mes codes promos</h3>
+		</div>
+		<div>
+			<h3>Recettes en vidéos</h3>
+		</div>
+		<div>
+			<h3>Outil pratique</h3>
+		</div>
+	</section>
+
+	<h2 class="text-center mt-5">Bredele c'est</h2>
+	<div class="d-flex justify-content-around mb-5">
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<h3 class="text-center">Satisfait ou remboursé</h3>
+			<p class="text-center">14 jours pour changer d'avis et être remboursé</p>
+			<img src="{{ asset('assets/pictures/website/logo_opinion.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+		</div>
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<h3 class="text-center">Service express</h3>
+			<p class="text-center">livraison en 24 heures</p>
+			<img src="{{ asset('assets/pictures/website/logo_truck.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+		</div>
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<h3 class="text-center">Livraison gratuite</h3>
+			<p class="text-center">dès 50 euros</p>
+			<img src="{{ asset('assets/pictures/website/logo_free.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+		</div>
+		<div class="d-flex flex-column justify-content-center align-items-center">
+			<h3 class="text-center">Paiement sécurisé</h3>
+			<p class="text-center">Données bancaires cryptées</p>
+			<img src="{{ asset('assets/pictures/website/logo_locker.svg') }}" style="width: 100px; height: 100px;" class="" alt="">
+		</div>
+	</div>
+
+{% endblock main %}
