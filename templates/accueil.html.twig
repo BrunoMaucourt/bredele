@@ -44,16 +44,15 @@
 		<h2 class="text-center">Produits populaires</h2>
 
 		<div class="row">
+		{% for produit in product %}
 			<div class="col-6">
-				<h3>Nom du produit</h3>
+				<h3>{{ produit.getName }}</h3>
+				<p>Prix = {{ produit.getProductPrice }}</p>
 				<p>Photo</p>
 				<button>Ajouter au panier</button>
 			</div>
-			<div class="col-6">
-				<h3>Nom du produit</h3>
-				<p>Photo</p>
-				<button>Ajouter au panier</button>
-			</div>
+		{% endfor %}
+
 		</div>
 	</div>
 
