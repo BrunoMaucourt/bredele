@@ -1,7 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block main %}
-	<div class="container-fluid d-flex justify-content-center">
+	<div class="container-fluid d-flex justify-content-center my-5">
 		<div id="carouselExampleIndicators" class="carousel slide w-75">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -43,18 +43,22 @@
 
 		<h2 class="text-center">Produits populaires</h2>
 
-		<!-- produits populaires
-								        photo
-								        réduction
-								        nom
-								        titre
-								        Ajouter panier
-								    
-								     -->
+		<div class="row">
+			<div class="col-6">
+				<h3>Nom du produit</h3>
+				<p>Photo</p>
+				<button>Ajouter au panier</button>
+			</div>
+			<div class="col-6">
+				<h3>Nom du produit</h3>
+				<p>Photo</p>
+				<button>Ajouter au panier</button>
+			</div>
+		</div>
 	</div>
 
 	<h2 class="text-center">Sur notre blog</h2>
-	<section class="d-flex justify-content-between">
+	<section class="d-flex justify-content-around">
 		<div>
 			<h3>Sélection de livres</h3>
 		</div>

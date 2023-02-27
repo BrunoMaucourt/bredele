@@ -1,17 +1,28 @@
 {% extends 'base.html.twig' %}
 
 {% block header %}
-	<div class="bg-secondary-subtle d-flex justify-content-between">
-		<h1>Bredele</h1>
-		<form class="d-flex w-25" role="search">
+	<div class="bg-secondary-subtle d-flex justify-content-around">
+		<a href="{{ path('accueil') }}" class="text-decoration-none text-gold">
+			<h1>Bredele</h1>
+		</a>
+		<form class="d-flex w-50" role="search">
 			<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
 			<button class="btn btn-outline-success" type="submit">Search</button>
 		</form>
-		<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Suivi commande</a>
-		<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Mon compte</a>
-		<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Panier</a>
+		<a class="nav-link active d-flex flex-column justify-content-center align-items-center" aria-current="page" href="{{ path('mesCommandes') }}">
+			<img src="{{ asset('assets/pictures/website/logo_order.svg') }}" class="" alt="">
+			<p>Suivi commande</p>
+		</a>
+		<a class="nav-link active d-flex flex-column justify-content-center align-items-center" aria-current="page" href="{{ path('mesCommandes') }}">
+			<img src="{{ asset('assets/pictures/website/logo_profil.svg') }}" class="" alt="">
+			<p>Mon compte</p>
+		</a>
+		<a class="nav-link active d-flex flex-column justify-content-center align-items-center" aria-current="page" href="{{ path('mesCommandes') }}">
+			<img src="{{ asset('assets/pictures/website/logo_cart.svg') }}" class="" alt="">
+			<p>Panier</p>
+		</a>
 	</div>
-	<nav class="navbar navbar-expand-lg bg-danger">
+	<nav class="navbar navbar-expand-lg bg-primary">
 		<div class="container-fluid">
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -43,7 +54,7 @@
 						<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Nos nouvautés</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Recettes</a>
+						<a class="nav-link active" aria-current="page" href="{{ path('listeRecettes') }}">Recettes</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="{{ path('blog') }}">Blog</a>
@@ -78,7 +89,9 @@
 		</div>
 		<div>
 			<h3>Nous contacter</h3>
-			<p>Email : contact@brunomaucourt.com</p>
+			<p>Email :
+				<a href="mailto:contact@brunomaucourt.com" class="text-decoration-none">contact@brunomaucourt.com</a>
+			</p>
 		</div>
 	</div>
 	<h3 class="text-center">Retouvez nous sur nos réseaux sociaux :</h3>
@@ -99,5 +112,8 @@
 			<img src="{{ asset('assets/pictures/website/social_media/LogoRSS.svg') }}" class="" alt="">
 		</a>
 	</div>
-	<p class="text-center mt-3">Copyright - <a href="https://brunomaucourt.com">Bruno Maucourt</a> {{ current_year }}  - Site portfolio</p>
+	<p class="text-center mt-3">Copyright -
+		<a href="https://brunomaucourt.com" class="text-decoration-none">Bruno Maucourt</a>
+		{{ current_year }}
+		- Site portfolio</p>
 {% endblock footer %}
