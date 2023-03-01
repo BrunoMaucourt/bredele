@@ -20,6 +20,9 @@ class Product
     #[ORM\Column(type: Types::TEXT)]
     private ?string $product_description = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $product_profil_picture = null;
+
     #[ORM\Column]
     private ?int $product_price = null;
 
@@ -60,6 +63,18 @@ class Product
     public function setProductDescription(string $product_description): self
     {
         $this->product_description = $product_description;
+
+        return $this;
+    }
+
+    public function getProductProfilPicture(): ?string
+    {
+        return $this->product_profil_picture;
+    }
+
+    public function setProductProfilPicture(string $product_profil_picture): self
+    {
+        $this->product_profil_picture = $product_profil_picture;
 
         return $this;
     }

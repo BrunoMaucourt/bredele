@@ -2,7 +2,7 @@
 
 {% block main %}
 	<div class="container-fluid d-flex justify-content-center my-5">
-		<div id="carouselExampleIndicators" class="carousel slide w-75">
+		<div id="carouselExampleIndicators" class="carousel slide w-100">
 			<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -34,42 +34,43 @@
 		</div>
 	</div>
 
-	<div>
+	<section>
 		<h2 class="text-center">Notre entreprise</h2>
-		<p>
+		<p class="fs-4">
 			L'entreprise, fictive, Bredele a pour but de diffuser la culture gastronimique alsacienne via les gâteaux de Noël appelés les bredele. Les bredele sont des petits biscuits préparés tarditonnellement en Alsace pour les fêtes de Noël. Les recettes de bredele sont transmisses de générations en générations. Voici quelques recettes que vous pourrez cuisiner chez vous.
 		</p>
+	</section>
 
-
-		<h2 class="text-center">Produits populaires</h2>
+	<section>
+		<h2 class="text-center">Nos produits populaires</h2>
 
 		<div class="row">
-		{% for produit in product %}
-			<div class="col-6">
-				<h3>{{ produit.getName }}</h3>
-				<p>Prix = {{ produit.getProductPrice }}</p>
-				<p>Photo</p>
-				<button>Ajouter au panier</button>
-			</div>
-		{% endfor %}
+			{% for produit in product %}
+				<div class="col-xl-4 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center mt-2">
+					<h3 class="text-primary">{{ produit.getName }}</h3>
+					<p>Prix = {{ produit.getProductPrice }} €</p>
+					<img src="{{ asset( produit.getProductProfilPicture ) }}" alt="{{ produit.getName }}">
+					<button type="button" class="btn btn-primary mt-2 text-white">Ajouter au panier</button>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
 
+	<section>
+		<h2 class="text-center">Sur notre blog</h2>
+			<div class="row">
+			{% for article in blog %}
+				<div class="col-xl-4 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center mt-2">
+					<h3 class="text-primary text-center">{{ article.getArticleName }}</h3>
+					<img src="{{ asset( article.getArticleProfilPicture ) }}" alt="{{ article.getArticleName }}">
+					<button type="button" class="btn btn-primary mt-2 text-white">Lire l'article</button>
+				</div>
+			{% endfor %}
 		</div>
-	</div>
-
-	<h2 class="text-center">Sur notre blog</h2>
-	<section class="d-flex justify-content-around">
-		<div>
-			<h3>Sélection de livres</h3>
-		</div>
-		<div>
-			<h3>Mes codes promos</h3>
-		</div>
-		<div>
-			<h3>Recettes en vidéos</h3>
-		</div>
-		<div>
-			<h3>Outil pratique</h3>
-		</div>
+		<!--Sélection de livres-->
+		<!--Mes codes promos-->
+		<!--Recettes en vidéos-->
+		<!--Outil pratique-->
 	</section>
 
 	<h2 class="text-center mt-5">Bredele c'est</h2>

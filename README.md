@@ -4,7 +4,7 @@ Bredele est un site de commerce vitrine ayant pour thème les gâteaux de Noël 
 
 ## Technologies utilisées
 
-BootStrap 5.3
+Bootstrap 5.3.O
 
 PHP 8.1.11
 
