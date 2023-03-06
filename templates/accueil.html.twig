@@ -48,7 +48,9 @@
 			{% for produit in product %}
 				<div class="col-xl-4 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center mt-2">
 					<h3 class="text-primary">{{ produit.getName }}</h3>
-					<p>Prix = {{ produit.getProductPrice }} €</p>
+					<p>
+						Prix = {{ produit.getProductPrice }} €
+					</p>
 					<img src="{{ asset( produit.getProductProfilPicture ) }}" alt="{{ produit.getName }}">
 					<button type="button" class="btn btn-primary mt-2 text-white">Ajouter au panier</button>
 				</div>
@@ -58,7 +60,7 @@
 
 	<section>
 		<h2 class="text-center">Sur notre blog</h2>
-			<div class="row">
+		<div class="row">
 			{% for article in blog %}
 				<div class="col-xl-4 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center mt-2">
 					<h3 class="text-primary text-center">{{ article.getArticleName }}</h3>
@@ -68,7 +70,7 @@
 			{% endfor %}
 		</div>
 		<!--Sélection de livres-->
-		<!--Mes codes promos-->
+	<!--Mes codes promos-->
 		<!--Recettes en vidéos-->
 		<!--Outil pratique-->
 	</section>

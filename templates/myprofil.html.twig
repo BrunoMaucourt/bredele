@@ -2,5 +2,13 @@
 {% block title %}Mon profil{% endblock %}
 
 {% block main %}
-	
+	<section class="container">
+        <div class="row">
+            <div class="col-xl-4 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center mt-2">
+                <div class="rounded h-75 w-75 bg-secondary-subtle d-flex justify-content-center align-items-center">
+                    <a class="text-decoration-none my-5" href="{{ path('app_logout') }}">Me deconnecter</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock main %}
